@@ -1,0 +1,17 @@
+# CREATE
+http.post./users/user:
+  summary: Create a new User
+  description: Create User from database
+  fn: com.biz.users.user.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/users/User'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object
+

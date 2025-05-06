@@ -1,0 +1,5 @@
+summary: Fetch many Post
+tasks:
+  - id: users_post_search
+    fn: datasource.users.Post.findMany
+    args: {}

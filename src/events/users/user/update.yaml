@@ -1,0 +1,23 @@
+# UPDATE
+http.put./users/user/{id}:
+  summary: Update a User
+  description: Update User from database
+  fn: com.biz.users.user.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/users/User'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      content:
+        application/json:
+          schema:
+            type: object
+

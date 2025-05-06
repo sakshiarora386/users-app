@@ -1,0 +1,21 @@
+User:
+  type: object
+  properties:
+    email:
+      type: string
+    name:
+      type: string
+      nullable: true
+Post:
+  type: object
+  properties:
+    title:
+      type: string
+    content:
+      type: string
+      nullable: true
+    published:
+      type: boolean
+      default: false
+    authorId:
+      type: integer

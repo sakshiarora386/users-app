@@ -1,0 +1,18 @@
+# ONE
+http.get./users/post/{id}:
+  summary: Fetch Post
+  description: Fetch Post from database
+  fn: com.biz.users.post.one
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: object
+

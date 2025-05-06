@@ -1,0 +1,18 @@
+# DELETE
+http.delete./users/post/{id}:
+  summary: Delete a Post
+  description: Delete Post from database
+  fn: com.biz.users.post.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object
+

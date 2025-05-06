@@ -1,0 +1,7 @@
+summary: Fetch User
+tasks:
+  - id: users_user_one
+    fn: datasource.users.User.findUnique
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

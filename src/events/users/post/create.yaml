@@ -1,0 +1,17 @@
+# CREATE
+http.post./users/post:
+  summary: Create a new Post
+  description: Create Post from database
+  fn: com.biz.users.post.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/users/Post'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object
+

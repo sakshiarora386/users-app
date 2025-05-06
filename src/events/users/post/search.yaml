@@ -1,0 +1,17 @@
+# SEARCH
+http.post./users/post/search:
+  summary: Fetch multiple Post
+  description: Fetch multiple Post from database
+  fn: com.biz.users.post.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+
